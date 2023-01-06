@@ -2,6 +2,7 @@ var count = localStorage.getItem("count");
 money();
 document.getElementById("count+").addEventListener('click',addcounting);
 document.getElementById("count-").addEventListener('click',subcounting);
+
 //css 적용
 var id;
 makeid();
@@ -32,9 +33,6 @@ function subcounting(){
     localStorage.setItem("count",count);
     nowcount();
     }
-    else{
-        alert('0번째 입니다.');
-    }
 }
 
 function nowcount(){
@@ -55,7 +53,7 @@ function money(){
         var p = document.createElement('p');
         p.setAttribute('id', i+'p');
         p.setAttribute('class', 'neon');
-        var nowmoney = document.createTextNode(i + "회째 : " + money + '원');
+        var nowmoney = document.createTextNode(i + "회째 : " + money.toLocaleString() + '원');
         p.appendChild(nowmoney);
         moneydisplay.appendChild(p);
     }
