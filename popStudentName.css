@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+div{
+    width: 95%;
+}
+#hole1{
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    font-family: 'KCC-Ganpan';
+    z-index: 10;
+    
+}
+table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+}
+#hole{
+    position: absolute;
+    font-family: 'KCC-Ganpan';
+    height: 96vh;
+    width: 96vw;
+    background-image: url('https://www.easylaw.go.kr/CSP/template/2022/09/21/EMB0000163042e6.bmp');
+    background-repeat : no-repeat;
+    background-size : cover;
+    opacity:0.1;
+    z-index: 3;
+    
+}
+button{
+    font-family: 'KCC-Ganpan';
+}
+footer{
+    font-size: 25px;
+}
