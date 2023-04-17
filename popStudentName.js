@@ -10,7 +10,8 @@ var grade1 = {
         4:"강승희, 길하경, 문채은, 박시은, 박지영, 여지연, 정서인, 정지연, 최가언, 한명희, 허수빈, 홍윤서, 김시온, 김용재, 김정훈, 김태겸, 나영채, 박민서, 박지윤, 박하랑, 서한결, 심민규, 윤서준, 이성찬, 이요셉, 이현승, 전준형, 조승현, 조현수, , "
         }
 var grade3 = {
-        2:"김민솔, 김지윤, 남다현, 신재희, 이가연, 이다솜, 이수현, 이유미, 전지수, 최보라, 최연정, 허주영, 황지영, 김권우, 김대연, 김시호, 박지승, 배효준, ㅗㅇ명우, 신민섭, 신상현, 윤예랑, 이민제, 이성민, 이재준, 이주표, 최소망"
+        2:"김민솔, 김지윤, 남다현, 신재희, 이가연, 이다솜, 이수현, 이유미, 전지수, 최보라, 최연정, 허주영, 황지영, 김권우, 김대연, 김시호, 박지승, 배효준, 송명우, 신민섭, 신상현, 윤예랑, 이민제, 이성민, 이재준, 이주표, 최소망",
+        3:"고지원, 문수빈, 박소현, 변다혜, 신세미, 우정인, 이재이, 이주연, 정예린, 조혜빈, 최지우, 홍민서, 황다윤, 강원재, 권태윤, 김기연, 김석현, 김성호, 김해환, 김혜성, 나민서, 류주환, 양준규, 원승연, 윤성원, 은정원, 홍선기, 박시후"
 }
 
 function callName(){
@@ -30,6 +31,7 @@ function callName(){
     }
 }
 function randomStd(){
+    delPopRandom();
     var classNum = document.getElementById("classNum").value;
     var stdNum = Math.ceil(Math.random()*31);
     var grade = document.getElementById("grade").value;
@@ -41,7 +43,6 @@ function randomStd(){
     }
     if(std[stdNum] !== undefined && std[stdNum] !=""){
         document.getElementById('randomDisplay').append(std[stdNum]);
-        document.getElementById('randomDisplay').append(", ");
     }else{
         randomStd()
     }
