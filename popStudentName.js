@@ -9,11 +9,20 @@ var grade1 = {
         3:"강서현, 강태희, 권수민, 김희연, 류경담, 박다연, 서은영, 양혜원, 이하윤, 정지승, 차주은, 최윤정, 김관우, 김도은, , 김예준, 김정구, 김찬희, 박시윤, 박찬희, 신재하, 윤민준, 이문형, 이연후, 전세훈, 정민제, 조문찬, 조준상, 표승호, 홍수민, 황태영",
         4:"강승희, 길하경, 문채은, 박시은, 박지영, 여지연, 정서인, 정지연, 최가언, 한명희, 허수빈, 홍윤서, 김시온, 김용재, 김정훈, 김태겸, 나영채, 박민서, 박지윤, 박하랑, 서한결, 심민규, 윤서준, 이성찬, 이요셉, 이현승, 전준형, 조승현, 조현수, , "
         }
+var grade3 = {
+        2:"김민솔, 김지윤, 남다현, 신재희, 이가연, 이다솜, 이수현, 이유미, 전지수, 최보라, 최연정, 허주영, 황지영, 김권우, 김대연, 김시호, 박지승, 배효준, ㅗㅇ명우, 신민섭, 신상현, 윤예랑, 이민제, 이성민, 이재준, 이주표, 최소망"
+}
 
 function callName(){
     var classNum = document.getElementById("classNum").value;
     var stdNum = parseInt(document.getElementById("stdNum").value)-1;
-    var std = grade1[classNum].split(", ");
+    var grade = document.getElementById("grade").value;
+    if(grade == 1){
+        var std = grade1[classNum].split(", ");
+    }
+    else if(grade == 3){
+        var std = grade3[classNum].split(", ");
+    }
     console.log(std[stdNum]);
     if(std[stdNum] != undefined && std[stdNum] !=""){
         delPop();
@@ -23,8 +32,13 @@ function callName(){
 function randomStd(){
     var classNum = document.getElementById("classNum").value;
     var stdNum = Math.ceil(Math.random()*31);
-    var std = grade1[classNum].split(", ");
-    console.log(stdNum);
+    var grade = document.getElementById("grade").value;
+    if(grade == 1){
+        var std = grade1[classNum].split(", ");    
+    }
+    else if(grade == 3){
+        var std = grade3[classNum].split(", ");
+    }
     if(std[stdNum] !== undefined && std[stdNum] !=""){
         document.getElementById('randomDisplay').append(std[stdNum]);
         document.getElementById('randomDisplay').append(", ");
